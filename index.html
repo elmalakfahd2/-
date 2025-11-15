@@ -478,7 +478,7 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
 </div>
 
 <div class="container">
-    <h1>🧮 حاسبة طول البليت لقالب/الأسطمبة البثق - الألومنيوم</h1>
+    <h1>🧮 حاسبة طول البليت لقالب/الأسطمبة لبثق - الألومنيوم</h1>
     <p class="subtitle">دعم سبائك متعددة + إدخال الوزن المتري (كجم/م) متزامن مع وزن العود + نظام القوالب التلقائي</p>
 
     <h3 class="section-title">📋 بيانات القالب (الاسطمبة) والإنتاج</h3>
@@ -543,7 +543,7 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
         
         <!-- حقل العكس: إدخال طول البليت للحصول على وزن العود والوزن المتري - تم نقله إلى هنا -->
         <div class="form-group">
-            <label for="inputBilletLength">إذا أدخلت طول البليت النهائي (سم) احسب وزن العود والوزن المتري:</label>
+            <label for="inputBilletLength">إذا أدخلت طول البليت  (سم) احسب وزن العود والوزن المتري:تقريبا</label>
             <input type="number" id="inputBilletLength" placeholder="أدخل الطول النهائي للبليت بالسم" step="0.1" min="1" class="english-numbers" />
             <div class="small">يرجع الوزن بعد طرح الهالك والهالك على الفرش وهالك الباتس. الحساب يحدث تلقائياً عند الإدخال.</div>
         </div>
@@ -557,7 +557,7 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
 
     <!-- قسم إدارة القوالب -->
     <div class="mold-management">
-        <h3 class="section-title">💾 نظام إدارة القوالب(الاسطمبات)</h3>
+        <h3 class="section-title">💾 نظام تخزين و إدارة القوالب(الاسطمبات)</h3>
         <div class="mold-buttons">
             <button class="mold-btn mold-save" id="saveMoldBtn">💾 حفظ</button>
             <button class="mold-btn mold-search" id="searchMoldBtn">🔍 بحث</button>
@@ -599,7 +599,7 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
 
         <!-- حقل هالك الباتس المضاف -->
         <div class="form-group">
-            <label for="buttScrap">هالك الباتس (مم):</label>
+            <label for="buttScrap">هالك الباتس (مم):(buttScrap )</label>
             <input type="number" id="buttScrap" value="15" step="1" min="0" inputmode="numeric" pattern="[0-9]*" class="english-numbers" />
             <div class="small">الهالك في نهاية البليت (بالملليمتر)</div>
         </div>
@@ -611,12 +611,12 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
         </div>
 
         <div class="form-group">
-            <label for="scrapPercentage">نسبة الهالك (%):</label>
+            <label for="scrapPercentage">نسبة الهالك (%):(اختياري)</label>
             <input type="number" id="scrapPercentage" value="5" step="0.1" inputmode="decimal" pattern="[0-9]*" class="english-numbers" />
         </div>
 
         <div class="form-group">
-            <label for="safetyFactor">عامل الأمان (%):</label>
+            <label for="safetyFactor">عامل الأمان (%):(اختياري)</label>
             <input type="number" id="safetyFactor" value="10" step="0.1" inputmode="decimal" pattern="[0-9]*" class="english-numbers" />
             <div class="small">افتراضي 10%؛ قلّله للـ5% لو العملية ثابتة</div>
         </div>
@@ -624,13 +624,13 @@ span.english-numbers, .calculation-info span, .analysis-table td, .analysis-tabl
         <div class="form-group">
             <label for="bedScrapLength">طول الهالك على الفرش (متر):</label>
             <input type="number" id="bedScrapLength" value="1.5" step="0.1" inputmode="decimal" pattern="[0-9]*" class="english-numbers" />
-            <div class="small">طول الهالك الإضافي على الفرش</div>
+            <div class="small">طول الهالك للمقدمات+المؤاخرات</div>
         </div>
 
         <div class="form-group">
-            <label for="desiredTons">كم طن تريده (طن):</label>
+            <label for="desiredTons">الكمية بالطن (طن):</label>
             <input type="number" id="desiredTons" value="" step="0.01" placeholder="مثال: 2.5" inputmode="decimal" pattern="[0-9]*" class="english-numbers" />
-            <div class="small">اتركها فارغة إن لم ترغب بالحساب بالطن</div>
+            <div class="small">لحساب عدد البليت وعدد الاعواد</div>
         </div>
 
         <!-- Toggle لتفعيل/تعطيل الهالك والأمان معًا -->
@@ -1422,7 +1422,7 @@ function resetForm(){
     document.getElementById('weightPerCm').value = '0.670';
     document.getElementById('extrusionRatio').value = '30';
     document.getElementById('scrapPercentage').value = '5';
-    document.getElementById('safetyFactor').value = '10';
+    document.getElementById('safetyFactor').value = '5';
     document.getElementById('bedScrapLength').value = '1.5';
     document.getElementById('buttScrap').value = '15';
     document.getElementById('desiredTons').value = '';
